@@ -1,0 +1,82 @@
+a{
+    color: white;
+    font-size: 22pt;
+    text-decoration: none;
+}
+body{
+    display: grid;
+    font-family: 'Marvel', sans-serif;
+    grid-template-areas: 'navbar navbar navbar navbar'
+                        'header header header header'
+                        'section section section batata'
+                        'footer footer footer footer';
+    grid-template-rows: 10vh 500px 60vh 15vh;
+    grid-template-columns: 25vw 25vw 20vw 30vw;
+    /* grid-gap: 1vh; */
+    margin: 0;
+}
+
+body::-webkit-scrollbar{
+    width: 0px; 
+    /* *remove scrollbar space * */
+    background: transparent;
+    /* *Option: just make scrollbar  */
+}
+
+nav{
+    align-items: center;
+    background-color: #BF1B1B;
+    display: flex;
+    grid-area: navbar;
+  justify-content: space-between; 
+}
+
+nav div img{
+    margin-left: 20px;
+}
+
+nav div:nth-child(2){
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+header{
+    background-image: url(imagens/trilogiacap.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: header;
+}
+
+section{
+    background-color: blue;
+    grid-area: section;
+}
+
+section h2{
+    color: white;
+}
+
+section p{
+    color: white;
+}
+
+aside{
+    background-color:red;
+    grid-area: batata;
+}
+
+aside img{
+    width: 130px;
+}
+
+aside p{
+    font-size: 20pt;
+    margin: 0;
+    text-align: center;
+}
+
+footer{
+    background-color: magenta;
+    grid-area: footer;
+}
